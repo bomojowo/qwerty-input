@@ -9,6 +9,10 @@ function QwertyInput(): JSX.Element {
     // better: setText(prev => prev + letter);
   }
 
+  const addSymbol = (symbol: string) => {
+    setText(text + symbol)
+  }
+
   const handleBackspace = () => {
     const textMinusLast = text.slice(0, text.length - 1);
     setText(textMinusLast)
@@ -34,6 +38,9 @@ function QwertyInput(): JSX.Element {
       <button onClick={() => addLetter('I')}>I</button>
       <button onClick={() => addLetter('O')}>O</button>
       <button onClick={() => addLetter('P')}>P</button>
+      <button onClick={() => addSymbol('!')}>!</button>
+      <button onClick={() => addSymbol('?')}>?</button>
+      <button onClick={() => addSymbol('£')}>£</button>
       <br />
       <button onClick={handleBackspace}>Backspace</button>
       <button onClick={() => setText('')}>Clear all</button>
