@@ -23,10 +23,11 @@ function QwertyInput(): JSX.Element {
     // })
   };
 
+  
   return (
     <>
       <input value={text} />
-      <button onClick={() => addLetter("Q")}>Q</button>
+      <button onClick={() => addLetter("Q".toLocaleUpperCase())}>Q</button>
       <button onClick={() => addLetter("W")}>W</button>
       <button onClick={() => addLetter("E")}>E</button>
       <button onClick={() => addLetter("R")}>R</button>
@@ -36,12 +37,24 @@ function QwertyInput(): JSX.Element {
       <button onClick={() => addLetter("I")}>I</button>
       <button onClick={() => addLetter("O")}>O</button>
       <button onClick={() => addLetter("P")}>P</button>
+      <button onClick={() => addLetter("q")}>q</button>
+      <button onClick={() => addLetter("w")}>w</button>
+      <button onClick={() => addLetter("e")}>e</button>
+      <button onClick={() => addLetter("r")}>r</button>
+      <button onClick={() => addLetter("t")}>t</button>
+      <button onClick={() => addLetter("y")}>y</button>
+      <button onClick={() => addLetter("u")}>u</button>
+      <button onClick={() => addLetter("i")}>i</button>
+      <button onClick={() => addLetter("o")}>o</button>
+      <button onClick={() => addLetter("p")}>p</button>
+      
       <button onClick={() => addSymbol("!")}>!</button>
       <button onClick={() => addSymbol("?")}>?</button>
       <button onClick={() => addSymbol("£")}>£</button>
       <br />
       <button onClick={handleBackspace}>Backspace</button>
       <button onClick={() => setText("")}>Clear all</button>
+      
       <WordDescription wordToDescribe={text} />
     </>
   );
